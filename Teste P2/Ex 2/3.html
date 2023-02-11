@@ -1,0 +1,148 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <title>Formulário</title>
+    <style>
+        body, input, select, textarea {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        }
+
+            input[type=submit], input[type=reset] {
+                padding: 0.375rem 0.75rem;
+                font-size: 1rem;
+            }
+
+            select, input[type=text], input[type=password] {
+                font-size: 1rem;
+                border: 1px solid #ced4da;
+                border-radius: 0.25rem;
+                width: 100%;
+            }
+
+        fieldset {
+            border: 1px solid #ced4da;
+            border-radius: 0.25rem;
+        }
+
+        textarea {
+            width: 100%;
+            font-size: 1rem;
+            border: 1px solid #ced4da;
+            border-radius: 0.25rem;
+        }
+    </style>
+    
+    <style type="text/css">
+        .container {height:150px; width:100%;}
+
+        .left {
+            float: left;
+            width: 40%;
+            
+            
+        }
+
+        .right {
+            float: right;
+            width: 60%;
+            height: 50px;
+        }
+        
+       
+            
+
+    </style>
+    <style>
+        .btns {
+            display: flex;
+        }
+
+        .btns .content {
+            margin: 20px auto;
+        }
+    </style>
+
+</head>
+<body>
+
+    <form name="PersonData" action="http://192.168.160.36/FormEcho.aspx" method="post">
+        <h1>Informação pessoal</h1>
+        <input type="hidden" name="FormName" value="UserForm" />
+        <fieldset>
+            <legend>Informação pessoal</legend>
+            <dt>Curso:</dt>
+            <dd>
+                <select name="Curso">
+                    <option value="1" selected="selected">Licenciatura em Engenharia Informática</option>
+                    <option value="2">Mestrado Integrado em Engenharia de Computadores e Telemática</option>
+                    <option value="3">Mestrado Integrado em Engenharia Eletrónica e Telecomunicações</option>
+                    <option value="4">Outro</option>
+                </select>
+            </dd>
+
+            <dt>Nome:</dt>
+            <dd>
+                <input type="text" name="FirstName" placeholder="Nome" />
+            </dd>
+            <dt>Sobrenome</dt>
+            <dd>
+                <input type="text" name="LastName" placeholder="Sobrenome" />
+            </dd>
+            <dt>Palavra-Passe:</dt>
+            <dd>
+                <input type="password" name="Password" placeholder="Digite a palavra passe" />
+            </dd>
+        </fieldset>
+
+
+
+        <fieldset>
+            <legend>Comentários</legend>
+            <dd>
+                <textarea name="Comments" rows="4" cols="80" placeholder="Insira os seus comentários"></textarea>
+            </dd>
+
+        </fieldset>
+        <div class="container">
+            <div class="right">
+                <fieldset>
+
+                    <legend>Meios de transporte</legend>
+                    <input type="checkbox" name="vehicle" value="Bicicleta">Bicicleta<br />
+                    <input type="checkbox" name="vehicle" value="Carro"> Carro<br />
+                    <input type="checkbox" name="vehicle" value="Comboio">Comboio<br />
+                </fieldset>
+            </div>
+            <div class="left">
+                <fieldset>
+
+                    <legend>Cor preferida</legend>
+                    <input type="radio" name="color" value="Azul">Azul<br />
+                    <input type="radio" name="color" value="Verde"> Verde<br />
+                    <input type="radio" name="color" value="Vermelho">Vermelho<br />
+                    <input type="radio" name="color" value="Outra">Outra
+                </fieldset>
+            </div>
+           
+        </div>
+   
+          
+
+
+       
+        
+        <div class="btns">
+            <div class="content">
+                <dd>
+                    <input name="Button" type="Submit" /><input type="reset" name="resetBtn" value="Reset" />
+                </dd>
+            </div>
+        </div>
+        
+
+
+
+    </form>
+</body>
+</html>
